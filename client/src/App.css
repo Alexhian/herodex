@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --color1-: #0a1a3f;
+  --color2-: #2e2e2e;
+  --color3-: #1a1f4a;
+  --color4-: #3a3a3a;
+  --color5-: #7b1113;
+  --color6-: #cba921;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  color: #eee;
+  margin: 0;
+  background-color: #2e2e2e;
+  background-image: url("./public/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 30% opacity */
+  z-index: -1; /* Make sure the overlay stays behind the content */
+}
+
+/*media query version desktop*/
+.heroSearch {
+  font-size: 15px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.btnLeft {
+  display: none;
+}
+
+@media (min-width: 996px) {
+  .container {
+    padding: 2rem 1.5rem 2rem 0;
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+  }
+  .NoSuperHero {
+    font-size: 25px;
+    position: relative;
+    bottom: 5rem;
+    text-align: center;
+    @media (max-width: 996px) {
+      font-size: 18px;
+    }
+  }
+  .heroSearch {
+    font-size: 18px;
+  }
+  .leftSection {
+    padding: 1rem 2rem 3rem 0.5rem;
+    margin-bottom: 4rem;
+    margin-top: -6.5rem;
+    height: 100%;
+  }
+
+  .btnLeft {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+  }
+
+  .btnFirst,
+  .btnSecond {
+    font-size: 8rem;
+    width: 250px;
+    border: none;
+    scale: 0.4;
+    color: white;
+    background: var(--color3-);
+    border-radius: 100%;
+    margin-top: -5%;
+  }
+
+  .btnFirst:hover,
+  .btnSecond:hover {
+    background-color: #252a63;
+  }
+}
